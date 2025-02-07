@@ -4,7 +4,7 @@ import speech_recognition as sr
 import playsound as psound
 import edge_tts
 import configs
-import time, math, threading
+import math, threading
 
 
 

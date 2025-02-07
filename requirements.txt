@@ -5,4 +5,4 @@ groq
 playsound
 pygame
 python-dotenv-vault
-SpeechRecognition
+speechrecognition

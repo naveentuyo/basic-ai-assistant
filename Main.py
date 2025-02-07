@@ -1,4 +1,5 @@
 # Homemade chatbot that interacts via audio!
+# Made by Naveen Tuyo
 # V1.0
 from dotenv_vault import load_dotenv
 from groq import Groq
@@ -80,7 +81,7 @@ def generate_response(chat, prompt):
 
     print_string("Using Google")
     try:
-        response = chat.send_message(configs.personality+"[User Message]: 2"+ prompt)
+        response = chat.send_message(configs.personality+"[User Message]: "+ prompt)
         text = response.text.replace("*","")
     except Exception as e:
         print("Error geneating Gemini reponse:",e)
@@ -160,8 +161,9 @@ def main():
             # Hotword detection
             if is_convo == True:
                 while audio_handler.is_playing():
-                    audio = recognizer.listen(audio_source, phrase_time_limit=3)
-                    handle_hotword(audio)
+                    audio = recognizer.listen(audio_source, phrase_time_limit=2)
+                    if audio_handler.is_playing():
+                        handle_hotword(audio)
 
 
 if __name__ == "__main__":

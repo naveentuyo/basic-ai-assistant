@@ -1,11 +1,13 @@
 # Overview
-100% Voice to Voice, full customizable, and easy-to-use chatbot. It supports voice interaction with customizable audio cues. Tons of different voices and features built in! This is a personal project to create a better voice assistant for free.
+100% Voice to Voice, full customizable, and easy-to-use chatbot. It supports voice interaction with customizable audio cues. Tons of different voices and features built in! This is a personal project to create a better voice assistant for free. 
+
+Made by Naveen Tuyo
 
 
 # Quick Start
 Clone repository
 ```
-git clone https://github.com/youwillpay4that/basic-ai-assistant
+git clone https://github.com/naveentuyo/basic-ai-assistant
 ```
 
 Install dependencies
@@ -23,18 +25,18 @@ GROQ_API_KEY="API-KEY-HERE"
 ```
 
 All done! Run Main.py to start your chatbot!
+Runs on Python 3.11.9 64-bit
 
 # Settings
-All settings are in configs.py. Settings such as wake and hot words, personality, voices, and much more are easily accessible.
-All audio cues are inside the Sounds folder.
+All settings are in configs.py. Settings such as wake and hot words, personality, voices, and much more are easily accessible. All audio cues easily editable inside the Sounds folder.
 
 # Usage Guide
-When speaking to the bot, all responses containing the wake word will be processed. The user can simply say "<wake_word>, where is Mount Everest?", and the bot will respond. To interupt simply say the hot word while the bot is speaking. If the bot has just replied or interupted, the user does not need to say the wake word for the following prompt. After a couple seconds the bot will sleep, and the wake word will be once again be required.
+When speaking to the bot, all responses containing the wake word will be processed. The user can simply say "<wake_word>, where is Mount Everest?", and the bot will respond. To interupt simply say the hot word while the bot is speaking. If the bot has just replied or interupted, the user does not need to say the wake word for a follow-up prompt. After a couple seconds the bot will sleep, and the wake word will be once again be required.
 
 # Full List of Features
 - Edge TTS for fast and smooth voices, +300 choices
 - Many different languages TTS including English, Chinese, Spanish and many more
-- Fast Audio Recognition by speech_recognition or faster_whisper for more advanced machines
+- Fast Audio Recognition by speech_recognition or faster_whisper for more powerful machines
 - Google Gemini or Groq for generating responses
 - Wake word recognition and interruption 
 - Dynamic sentence processing

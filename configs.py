@@ -6,14 +6,14 @@ import math
 prompt_generation = "Google" # Google or Groq. Google for better responses, Groq for speed
 wake_word = "jarvis"
 hot_word = "stop"
-personality = f'''[System Message] You are a helpful AI assistant. 
+personality = f'''[System Message] You are a helpful assistant with personality. 
 Keep answers SHORT and DO NOT include "{hot_word}", in your response. '''
 print_output = True # For debuging
-time_trials = True
+time_trials = False
 
 # Edge TTS Settings
 voices = ['en-US-GuyNeural', 'en-US-JennyNeural', 'en-US-MichelleNeural', "en-US-EricNeural", "en-NG-EzinneNeural"]
-chosen_voice = voices[4] # List of voices in tts_voices.txt
+chosen_voice = voices[3] # List of voices to choose in tts_voices.txt
 speech_rate = "+10%"
 speech_volume = "+0%"
 
@@ -31,7 +31,7 @@ safety_settings = {
    HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
    HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
    HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-   HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+   HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
 } # BLOCK_ONLY_HIGH, BLOCK_MEDIUM_AND_ABOVE, BLOCK_LOW_AND_ABOVE, BLOCK_NONE
 
 # Audio Recog 
